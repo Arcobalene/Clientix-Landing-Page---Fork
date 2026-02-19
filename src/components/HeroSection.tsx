@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlayCircleIcon } from 'lucide-react';
+import { PlayCircleIcon, CalendarCheckIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white pt-28 md:pt-36 pb-16 md:pb-24">
@@ -78,9 +79,16 @@ export function HeroSection() {
 
               Начать бесплатно
             </a>
+            <Link
+              to="/booking"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:bg-teal-dark hover:scale-[1.03] transition-all duration-200">
+
+              <CalendarCheckIcon className="w-5 h-5" />
+              Записаться в салон
+            </Link>
             <a
               href="#"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-teal text-teal font-bold text-lg rounded-full hover:bg-teal hover:text-white transition-all duration-200">
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gray-200 text-gray-600 font-bold text-lg rounded-full hover:border-gray-300 hover:text-gray-800 transition-all duration-200">
 
               <PlayCircleIcon className="w-5 h-5" />
               Смотреть демо
@@ -177,7 +185,6 @@ export function HeroSection() {
 
               {/* Main content */}
               <div className="flex-1 p-4 md:p-6 bg-gray-50">
-                {/* Stats row */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
                   <div className="bg-white rounded-xl p-3 shadow-sm">
                     <div className="text-xs text-gray-400 mb-1">
@@ -207,7 +214,6 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Calendar grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="md:col-span-2 bg-white rounded-xl p-4 shadow-sm">
                     <div className="text-sm font-bold text-dark mb-3">
